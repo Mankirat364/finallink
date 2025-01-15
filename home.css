@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: "Montserrat", serif;
+    
+    background-color: black;
+  
+}
+.sectionaer{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.split {
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.5s ease; 
+}
+
+
+.split.left:hover {
+    width: 55%; 
+}
+
+.split.right:hover {
+    width: 55%; 
+}
+
+.split.left:hover ~ .split.right {
+    width: 45%; 
+}
+
+.split.right:hover ~ .split.left {
+    width: 45%; 
+}
+
+.split.left {
+}
+
+.split.right {
+}
+
+.car-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.videoText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.car-content video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.overlay-content {
+    position: absolute;
+    color: white;
+    text-align: center;
+    z-index: 20;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.overlay-content h1 {
+    font-size: 3vw;
+    margin-bottom: 1rem;
+    min-width: 42vw;
+}
+
+.play-button, .explore-link {
+    color: white;
+    padding: 10px 20px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover, .explore-link:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Style for explore button */
+.explore-link {
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 3px;
+}
+.navigation{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3vw;
+    padding-top: 1vw;
+    padding-right: 4vw;
+}
+.navigation img{
+    width: 13vw;
+}
+.icon{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.icon .icon-line{
+    width: 5vw;
+    height: 1px;
+    background-color: white;
+}
+.homepageaboutsection{
+    min-height: 100vh;
+}
+.homepageaboutCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 9vw;
+    color: white;
+}
+.homecontent{
+    width: 60%;
+    text-align: left;
+}
+.homepageaboutCenter h1{
+    text-transform: uppercase;
+    font-size: 1vw;
+}
+.homepageaboutCenter p{
+    font-size: 2vw;
+    padding-top: 2vw;
+}
+.slider{
+    display: flex;
+    justify-content: center;
+}
+.slider-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: -4vw;
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 100vw;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
+    z-index: 10;
+}
+
+.slide-caption h1 {
+    font-size: 4vw;
+    margin-bottom: 1rem;
+}
+
+.slider-link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.slider-link:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Slider navigation */
+.slider-navigation {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.nav-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-dot.active {
+    background-color: #007bff;
+}
+
+.nav-dot:hover {
+    background-color: #007bff;
+}
+.offeringText{
+    min-height: 100vh;
+    position: relative;
+}
+.animatedOfferImage{
+    width: 34vw;
+    height: 40vh;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.overflowinghidden{
+    overflow: hidden;
+}
+.animatedOfferImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    filter: brightness(40%);
+}
+.animatedOfferImage h1{
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    opacity: 0;
+    left: 50%;
+    font-size: 5vw;
+    color: white;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    line-height: 1;
+}
+.animatedOfferImage p{
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    opacity: 0;
+    left: 50%;
+    font-size: 2vw;
+    color: white;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    line-height: 1;
+    width: 50%;
+}
+.videosContainer{
+    min-height: 100vh;
+}
+.divStacking{
+    min-height: 100vh;
+    position: relative;
+}
+.container1{
+    width: 70vw;
+    height: 80vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+    background-color: white;
+}
+.container1 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container1 h1{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    opacity: 0;
+    color: white;
+    text-transform: uppercase;
+    font-size: 7vw;
+    transform: translate(-50%,-50%);
+}
+.container1 p{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    opacity: 0;
+    color: white;
+    font-size: 2vw;
+    transform: translate(-50%,-50%);
+}

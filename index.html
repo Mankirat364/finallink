@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Animation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="w-full mymain">
+        <div class="absoluteNavbar">
+            <div class="navbar">
+                <img src="./images/logo.jpg" alt="">
+                <div class="navigationMenu">
+                    <div class="line1"></div>
+                    <div class="line1"></div>
+                    <div class="line1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mainFrontPage">
+            <video src="./images/video1.mp4" autoplay  muted loop ></video>
+            <div class="frontPageContent">
+                <div class="overflowinghidden">
+                    <h1>Imagineering<br>
+                        Tomorrow</h1>
+                    </div>
+                    <img src="./images/plane.png" id="myPlane" alt="">
+            </div>
+            <div class="bottomHomePage">
+                <img src="./images/Subtract.png" alt="">
+                <div class="circleArrowDiv">
+                    <img src="./images/arrow.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="animation">
+           
+            <div class="div1">
+                <video src="./images/video3.mp4" autoplay muted loop></video>
+                <div class="text">
+                    <h1>Shish Adv</h1>
+                    <p>Shish Advanced Composites Private Limited is a leading manufacturer dedicated to creating high-performance, customised advanced composite solutions. Our expertise encompasses everything from design and development to the manufacturing of tooling, jigs, fixtures, and composite products.</p>
+                    <div class="button">
+                        <a href="./home.html">
+                            <button>Read More</button>
+                        </a>
+                    </div>
+                    <div class="plane2">
+                        <img src="./images/plane2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="div2" id="diver2">
+                <video src="./images/video4.mp4" autoplay  muted loop></video>
+                <div class="text">
+                    <h1>About Us</h1>
+                    <p>Shish Advanced Composites specializes in delivering advanced materials for the automotive sector, enabling vehicle manufacturers to achieve superior performance, efficiency, and sustainability. From lightweight panels to high-performance structural components, we provide end-to-end solutions.</p>
+                    <div class="button">
+    
+                        <a href="./about.html" target="_blank">
+                            <button>
+                                Discover
+                            </button>
+                        </a>
+                    </div>
+                    <div class="plane3">
+                        <img src="./images/formula1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="div3">
+                <video src="./images/video1.mp4" autoplay muted loop></video>
+                <div class="text">
+                    <h1>Capabilities</h1>
+                    <p>At Shish Advanced Composites, we are committed to delivering tailored solutions that address the unique needs of our customers. 
+
+                        Design & Development: Transforming initial ideas into production-ready designs with precision and efficiency.
+                        Tooling, Jigs & Fixtures Manufacturing: Creating custom-made tools designed for accuracy and reliability.</p>
+                    <div class="button">
+                        <button>Discover</button>
+                    </div>
+                    <div class="plane4">
+                        <img src="./images/bike.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="hiddenmenu">
+        <div class="navigationMenu " id="closeMenuButton">
+            <div class="line1"></div>
+            <div class="line1"></div>
+            <div class="line1"></div>
+        </div>
+        <div class="menu-content">
+            <ul class="menu-items">
+                <li class="text-large" id="firstdiv">01 About Us</li>
+                <li class="text-large" id="seconddiv">02 Development</li>
+                <li class="text-large" id="thirddiv">03 Technology</li>
+                <li class="text-large" id="fourthdiv">04 Facilities</li>
+                <li class="differentarea" id="fromhereli">Careers</li>
+                <li class="differentarea">Factory Tours</li>
+                <li class="differentarea">Campus</li>
+                <li class="differentarea">E_Store</li>
+                <li class="differentarea">Media Center</li>
+                <li class="differentarea">Contact</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li >01 Shish Adv</li>
+            <li>02 About Us</li>
+            <li>03 Capabilities</li>
+            <li>04 Facilities</li>
+        </ul>
+    </div>
+    <!-- GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Your custom JS file -->
+    <script src="./index.js"></script>
+</body>
+
+</html>

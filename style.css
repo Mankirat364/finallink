@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    font-family: "Montserrat", serif;
+}
+
+.navbar {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 3vw;
+   
+}
+
+.animation{
+    margin-top: 5vw ;
+}
+.absoluteNavbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000000;
+}
+.mymain{
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.navbar img {
+    width: 13vw;
+    filter: grayscale(1) brightness(1000%);
+}
+
+.div1 .text{
+    background-color: #223b51;
+    width: 50vw;
+    height: 60vh;
+    border-radius: 23px;
+}
+.div2 .text{
+    background-color: #212121;
+    width: 50vw;
+    height: 60vh;
+    border-radius: 23px;
+}
+.div3 .text{
+    background-color: #2d3133;
+    width: 50vw;
+    height: 60vh;
+    border-radius: 23px;
+}
+.div1, .div2, .div3 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.div1 .text{
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    padding: 3vw;
+}
+.div1 .text h1{
+    text-transform: uppercase;
+    font-size: 4vw;
+}
+.div1 .text p{
+    padding-top: 1vw;
+    
+}
+.plane2{
+    position: absolute;
+    right: -30%;
+}
+.plane3{
+    position: absolute;
+    right: -30%;
+    top: 50%;
+}
+.plane4{
+    position: absolute;
+    right: -30%;
+    top: 30%;
+}
+.plane2 img{
+    width: 45vw;
+}
+.plane3 img{
+    filter: grayscale(1);
+    width: 45vw;
+}
+.plane4 img{
+    filter: grayscale(1);
+    width: 35vw;
+}
+.div2 .text{
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    padding: 3vw;
+}
+.div2 .text h1{
+    text-transform: uppercase;
+    font-size: 4vw;
+}
+.div3 .text{
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    padding: 3vw;
+}
+.div3 .text h1{
+    text-transform: uppercase;
+    font-size: 4vw;
+}
+
+.div1 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.div2 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.div3 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+
+.mymain {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.button{
+    padding-top: 2vw;
+}
+.button button{
+    border: none;
+    min-width: fit-content;
+    min-height: fit-content;
+    padding: 1vw 6vw 1vw 6vw; 
+    text-transform: uppercase;
+    background: none;
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    position: relative;
+}
+.button button::before {
+    content: "DISCOVER";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.button button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.sidebar{
+    position: fixed;
+    left: 2%;
+    bottom: 0%;
+    transform: translate(0,-50%);
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+.sidebar ul li.active {
+    color: #ffffff; 
+    font-weight: bold;
+}
+
+.sidebar ul li.glow {
+    box-shadow: 0 0 15px 3px #ffffff; 
+    color: #fff;
+    font-weight: bold;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+}
+.sidebar::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.486);
+    left: -8%;
+}
+.sidebar::after{
+    position: absolute;
+    content: "";
+    height: 12%;
+    width: 4px;
+    background-color: #ffffff;
+    left: -9%;
+    border-radius: 12px;
+    top: 0;
+}
+.sidebar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.635);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.navigationMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: fixed;
+    right: 3%;
+    cursor: pointer;
+}
+.navigationMenu .line1{
+    width: 4vw;
+    height: 1px;
+    background-color: white;
+    transition: 0.3s ease;
+}
+.hiddenmenu{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000000;
+    position: fixed;
+    top:-100%;
+    transition: all .3s ease;
+}
+
+.hiddenmenu .navigationMenu{
+    margin-top:5vw;
+}
+.hiddenmenu .navigationMenu :nth-child(1){
+    transform: rotate(45deg) translate(5px, 0px); 
+    transform-origin: center;
+}
+.hiddenmenu .navigationMenu :nth-child(3){
+    transform: rotate(-45deg) translate(5px, 0px); 
+    transform-origin: center;
+}
+.hiddenmenu .navigationMenu :nth-child(2){
+    display: none;
+}
+.menu-content{
+    padding: 4vw;
+    overflow: hidden;
+}
+.menu-items{
+    color: white;
+    list-style: none;
+   
+}
+.menu-items li{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.text-large{
+    font-size: 6vw;
+}
+.differentarea{
+    padding-top: .5vw;
+}
+.mainFrontPage{
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+.mainFrontPage video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.frontPageContent{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.overflowinghidden{
+    overflow: hidden;
+}
+.frontPageContent h1{
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 8vw;
+    line-height: .9;
+    position: relative;
+
+}
+.frontPageContent h1::before{
+    content: "IMAGINEERING TOMORROW"; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: transparent;
+    transform: translate(-50%,-50%);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #ffffff; 
+    z-index: 10;
+ }
+ 
+.frontPageContent img{
+    width: 70vw;
+    left: 50%;
+    transform: translate(-50%,0%);
+    position: absolute;
+    top: 3%;
+    filter: grayscale(1);
+}
+.bottomHomePage{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+.bottomHomePage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1) brightness(1000%);
+}
+.circleArrowDiv{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+}
+.circleArrowDiv img{
+    filter: invert(1);
+    width: 1rem;
+}
+@media screen and (max-width: 650px){
+    .frontPageContent h1 {
+        font-size: 11vw !important;
+    }
+    body,html{
+        overflow-x: hidden;
+    }
+}
+@media screen and (max-width: 500px){
+    
+    .navbar img {
+        width: 32vw !important;
+    }
+    .navigationMenu .line1 {
+        width: 12vw !important;
+    }
+    .navigationMenu {
+        padding-right: 4vw !important;
+        right: 7%;
+    }
+    .text-large {
+        font-size: 9vw !important;
+    }
+    .div1 .text p {
+        font-size: 4vw !important;
+    }
+    .div1 .text h1 {
+        font-size: 9vw !important;
+    }
+    .div2 .text p {
+        font-size: 4vw !important;
+    }
+    .div2 .text h1 {
+        font-size: 9vw !important;
+    }
+    .div3 .text p {
+        font-size: 4vw !important;
+    }
+    .div3 .text h1 {
+        font-size: 9vw !important;
+    }
+    .frontPageContent img {
+        width: 92vw !important;
+        left: 49% !important;
+    }
+    .frontPageContent h1 {
+        font-size: 12vw !important;
+    }
+    .mainFrontPage {
+        height: 77vh !important;
+    }
+    .button {
+        padding-top: 5vw !important;
+    }
+    .plane2 img {
+        width: 83vw !important;
+    }
+    .bottomHomePage {
+        height: 7vh !important;
+    }
+    .circleArrowDiv {
+        width: 7vh !important;
+        height: 7vh !important;
+        padding: 3vw !important;
+    }
+     .div1 .text {
+        position: absolute;
+        left: 51% !important;
+        transform: translate(-50%, -50%);
+        padding: 7vw !important;
+        width: 80vw;
+    }
+     .div1 .text {
+        position: absolute;
+        left: 51% !important;
+        transform: translate(-50%, -50%);
+        padding: 7vw !important;
+        width: 80vw;
+    }
+     .div2 .text {
+        position: absolute;
+        left: 51% !important;
+        transform: translate(-50%, -50%);
+        padding: 7vw !important;
+        width: 80vw;
+    }
+     .div2 .text {
+        position: absolute;
+        left: 51% !important;
+        transform: translate(-50%, -50%);
+        padding: 7vw !important;
+        width: 80vw;
+    }
+     .div3 .text {
+        position: absolute;
+        left: 51% !important;
+        transform: translate(-50%, -50%);
+        padding: 7vw !important;
+        width: 80vw;
+    }
+     .div3 .text {
+        position: absolute;
+        left: 51% !important;
+        transform: translate(-50%, -50%);
+        padding: 7vw !important;
+        width: 80vw;
+    }
+    .plane3 {
+        right: -25% !important;
+        top: 62% !important;
+    }
+    .plane3 img {
+        width: 102vw !important; 
+    }
+    .plane4 {
+        right: -25% !important;
+        top: 57% !important;
+    }
+    .plane4 img {
+        width: 90vw !important;
+    }
+    .menu-content {
+        padding: 30vw 4vw !important;
+    }
+    #fromhereli{
+        margin-top: 16vw;
+    }
+    .hiddenmenu .navigationMenu {
+        margin-top: 11vw !important;
+    }
+    .hiddenmenu #closeMenuButton{
+        margin-top: 11vw !important;
+    }
+    .sidebar {
+        left: 6% !important;
+    }    
+}

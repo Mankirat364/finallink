@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Montserrat", serif;
+    overflow-x: hidden;
+    background-color: black;
+}
+.wrapper{
+   height: 100vh;
+    width: 100%;
+    background-color: black;
+    transition: background-image 0.5s ease-in-out;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+  
+.aboutNavbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 9vw 0vw 3vw;
+    position: fixed;
+    width: 100vw;
+    z-index: 10000000;
+    top: 0;
+}
+.aboutNavbar img{
+    width: 13vw;
+    filter: grayscale(1) brightness(1000%);
+}
+.white{
+    color: white;
+    text-transform: uppercase;
+}
+.navigationMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+.navigationMenu .line1{
+    width: 3vw;
+    height: 1px;
+    background-color: white;
+}
+.videodiv{
+    width: 33vw;
+    height: 65vh;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.videodiv video{
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+    object-fit: cover;
+}
+
+.videotext{
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3vw;
+    line-height: normal;
+    width: 100vw;
+}
+
+.videotext {
+    padding-top: 2vw;
+}
+.hiddenmenu{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000000;
+    position: fixed;
+    top:-200%;
+    transition: all .3s ease;
+}
+
+.hiddenmenu .navigationMenu{
+    margin-top:5vw;
+}
+.hiddenmenu .navigationMenu :nth-child(1){
+    transform: rotate(45deg) translate(5px, 0px); 
+    transform-origin: center;
+}
+.hiddenmenu .navigationMenu :nth-child(3){
+    transform: rotate(-45deg) translate(5px, 0px); 
+    transform-origin: center;
+}
+.hiddenmenu .navigationMenu :nth-child(2){
+    display: none;
+}
+.menu-content{
+    padding: 4vw;
+    overflow: hidden;
+}
+.menu-items{
+    color: white;
+    list-style: none;
+   
+}
+.menu-items li{
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.text-large{
+    font-size: 6vw;
+}
+.differentarea{
+    padding-top: .5vw;
+}
+.videotext button{
+    border: none;
+    min-width: fit-content;
+    min-height: fit-content;
+    padding: 1vw 6vw 1vw 6vw; 
+    text-transform: uppercase;
+    background: none;
+    color: white;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    position: relative;
+}
+.videotext button::before {
+    content: "PLAY VIDEO";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Include scale(0) in the transform */
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Add smooth transition for scaling */
+    z-index: 1;
+}
+
+.videotext button:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Scale to 1 on hover */
+}
+.detailSection{
+    min-height: 100vh;
+}
+.rightText{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 8vw;
+}
+.headingDetails{
+    width:65%;
+    display: flex;
+    padding-top: 12vw;
+    flex-direction: column;
+    gap: 10px;
+}
+.headingDetails h1{
+    color: white !important;
+}
+.headingDetails p{
+    text-transform: uppercase;
+    font-size: 1vw;
+    color: white;
+}
+.description{
+    font-size: 1.4vw !important;
+    font-weight: 500;
+    color: white !important;
+}
+.descirpitontext{
+    color: white !important;
+    padding-top: 1vw;
+}
+.descirpitontext button{
+    border: none;
+    min-width: fit-content;
+    min-height: fit-content;
+    padding: 1vw 6vw 1vw 6vw; 
+    text-transform: uppercase;
+    background: none;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    position: relative;
+}
+.descirpitontext button::before {
+    content: "VIEW TIMELINE";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Include scale(0) in the transform */
+    background-color: #fff;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Add smooth transition for scaling */
+    z-index: 1;
+}
+
+.descirpitontext button:hover::before {
+    transform: translate(-50%, -50%) scale(1); /* Scale to 1 on hover */
+}
+.animatedImageSection{
+    height: 100vh;
+    position: relative;
+}
+.animatedImageSection2{
+    width: 70vw;
+    height: 60vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+   
+}
+.animatedImageSection2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.abouttheimagecontainer{
+    height: 100vh;
+}
+.outerwrapper{
+    min-height: 100vh;
+}
+.aboutimageDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6vw 9vw;
+}
+.contentContainer{
+    width: 65%;
+}
+.contentContainer h1{
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 4vw !important;
+    color: white;
+    
+}
+.contentContainer p{
+    font-size: 1.5vw;
+    color: white;
+}
+.mt-5{
+    margin-top: 3vw;
+}
+.imageContainer{
+    width: 77vw;
+    height: 52vh;
+    background-color: black;
+    position: absolute;
+    right: 0;
+}
+.imageContainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.passionateDiv{
+    min-height: 100vh;
+}
+.passionCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 6vw;
+}
+.passionCenter h1{
+    color: white !important;
+    font-weight: 500;
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+.passionCenter p{
+    color: white !important;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+    padding-top: .5vw;
+}
+.passionateCenterImage{
+    width: 80vw;
+    margin-top: 5vw;
+    height: 70vh;
+    background-color: black;
+}
+.passionateCenterImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ourVision{
+    height: 100vh;
+}
+.centerVision{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    padding-left: 6vw;
+    padding-top: 4vw;
+}
+.contentingdiv{
+    width: 70%;
+    padding-left: 2.5vw;
+}
+.contentingdiv h1{
+    font-weight: 500;
+    font-size: 2vw;
+    color: white !important;
+    text-transform: uppercase;
+}
+.contentingdiv p{
+    padding-top: 1vw;
+    color: white !important;
+}
+.carAnimation{
+    min-height: 100vh;
+    position: relative;
+}
+.carImage{
+    width: 50vw;
+    height: 50vh;
+    
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+}
+.carImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carbonContentDiv{
+    position: absolute;
+    right: -100%;
+    color: white !important;
+}
+.carbonContentDiv p{
+
+}
+.wholeTeam{
+    min-height: 100vh;
+}
+.wholeTeamCenter{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.wholeTeamCenter p{
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    color: white !important;
+}
+.wholeTeamCenterDiv{
+    width: 80vw;
+    height: 70vh;
+    background-color: black;
+    position: absolute;
+    right: 1%;
+    margin-top: 1vw;
+}
+.wholeTeamCenterDiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.aboutCompanyCenter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.companudiv{
+    width: 60%;
+    padding-left: 5vw;
+}
+.companudiv p{
+    font-size: 1.5vw;
+    color: white !important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.companyPhoto{
+    height: 100vh;
+    margin-top: 4vw;
+    position: relative;
+}
+.companyPhoto img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+    object-fit: cover;
+}
+.comapanyContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: white;
+    transform: translate(-50%,-50%);
+}
+.comapanyContent h1{
+    text-transform: uppercase;
+    font-size: 5vw !important;
+    color: white !important;
+    line-height: 1 !important;
+}
+.comapanyContent p{
+    padding-top: 1vw;
+    color: white !important;
+    color: rgb(196, 196, 196);
+}
+.ourCapabilities{
+    min-height: 100vh;
+    margin-top: 23vw;
+}
+.ourCapabilitiesCente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}.ourCapabilitiesCente .title{
+    width: 60%;
+}
+.ourCapabilitiesCente .title h1{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: white !important;
+    font-size: 4vw;
+
+}
+.ourCapabilitiesCente .title p{
+    padding-top: 1.5vw;
+    color: white !important;
+}
+.lastdivOFwebsite{
+   height: 100vh;
+
+}
+.lastdivOFwebsite img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 500px){
+    html{
+        overflow-x: hidden;
+    }
+    .aboutNavbar img{
+        width: 32vw !important;
+    }
+    .navigationMenu .line1 {
+        width: 9vw !important;
+        height: 1px;
+        background-color: black;
+    }
+    .white {
+        color: black;
+        text-transform: uppercase;
+        padding-right: 10vw !important;
+    }
+    .videodivh1{
+        font-size: 13vw;
+        line-height: 1;
+    }
+    .videotext button {
+        margin-top: 4vw;
+        font-size: 5vw;
+        padding: 2vw 6vw 2vw 6vw;
+    }
+    .videodiv{
+        height: 47.0348vh;
+    width: 67.9997vw;
+    }
+    .rightText {
+        justify-content: center !important;
+    }
+    .headingDetails {
+        width: 100% !important;
+    }
+    .heading {
+        font-size: 10vw !important;
+        color: white;
+        line-height: 1;
+        font-weight: 500;
+    }
+    .description{
+        color: white;
+        font-size : 2.4vw !important;
+    }
+    .detailSection{
+        padding: 6vw;
+    }
+
+    .detailSection {
+        min-height: 62vh !important;
+    }
+    .contentContainer h1 {
+        font-weight: 500 !important;
+        font-size: 9vw !important;
+    }
+    .aboutimageDetail {
+        padding: 6vw 6vw;
+    }.contentContainer {
+        width: 100% !important;
+    }
+    .contentContainer p {
+        font-size: 4.5vw !important;
+        padding-top: 2vw !important;
+    }
+    .imageContainer {
+        width: 100vw !important;
+        padding: 3vw !important;
+        height: 52vh;
+        background-color: black;
+    }
+    .passionCenter h1 {
+        font-weight: 500;
+        font-size: 7vw !important;
+        text-transform: uppercase;
+        color: white;
+    }
+    .passionCenter {
+        padding-left: 4vw !important;
+    }
+    .passionCenter p {
+        color: white;
+        text-transform: capitalize;
+        font-size: 4.2vw !important;
+        padding-top: .5vw;
+    }
+    .passionateCenterImage {
+        width: 100vw !important;
+        padding: 4vw;
+        margin-right: 3vw;
+        background-color: black;
+    }
+    .contentingdiv {
+        width: 100% !important;
+    }
+    .contentingdiv h1 {
+        font-weight: 500 !important;
+        font-size: 7vw !important;
+    }
+    .contentingdiv p {
+        padding-top: 4vw !important;
+    }
+    .centerVision {
+        padding-left: 2vw !important;
+    }
+    .carbonContentDiv{
+        display: none;
+    }
+    .wholeTeamCenter p {
+        font-size: 7vw !important;
+        padding-bottom: 9vw;
+    }
+    .wholeTeamCenterDiv {
+        width: 97vw !important;
+        height: 70vh;
+        background-color: black;
+        position: absolute;
+        right: 1%;
+    }
+    .wholeTeamCenter{
+        padding: 4vw !important;
+    }
+    .wholeTeam{
+        margin-bottom: 38vw;
+    }
+    .companudiv {
+        width: 100% !important;
+        padding-right: 2vw !important;
+    }
+    .companudiv p {
+        font-size: 5.5vw !important;
+        font-weight: 500 !important;
+        padding-bottom: 6vw;
+    }
+    .comapanyContent h1 {
+        text-transform: uppercase;
+        font-size: 11.5vw !important;
+        line-height: 1 !important;
+    }
+    .comapanyContent p {
+        padding-top: 2vw;
+    }
+    .descirpitontext {
+        padding-top: 8vw !important;
+    }
+    .comapanyContent{
+        width: 100vw !important;
+    }
+    .descirpitontext button {
+        font-size: 6vw !important;
+        padding: 2vw 6vw 2vw 6vw;
+    }
+    .ourCapabilities {
+        margin-top: 57vw !important;
+    }
+    .ourCapabilitiesCente .title {
+        width: 100% !important;
+        padding: 5vw;
+    }
+    .ourCapabilitiesCente .title h1 {
+        font-size: 9vw !important;
+    }
+    .ourCapabilitiesCente .title p {
+        padding-top: 3.5vw !important;
+    }
+    .mt-5{
+        margin-top: 8vw !important;
+    }
+    .hiddenmenu .navigationMenu {
+        margin-top: 11vw !important;
+    }
+    .hiddenmenu #closeMenuButton{
+        margin-top: 11vw !important;
+    }
+    .menu-content {
+        padding: 30vw 4vw !important;
+    }
+    #fromhereli{
+        margin-top: 16vw;
+    }
+}
