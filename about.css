@@ -20,7 +20,9 @@ body,html{
 ::-webkit-scrollbar{
     display: none;
 }
-
+.carbonContentDiv{
+    display: none;
+}
   
 .aboutNavbar{
     display: flex;
@@ -213,7 +215,7 @@ body,html{
     top: 50%;
     transform: translate(-50%, -50%) scale(0); /* Include scale(0) in the transform */
     background-color: #fff;
-    color: #fff;
+    color: #000;
     width: 100%;
     height: 100%;
     display: flex;
