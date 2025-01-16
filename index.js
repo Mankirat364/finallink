@@ -193,3 +193,27 @@ fourthdiv.addEventListener('mouseenter', () => {
         });
     });
 });
+const logo = document.querySelector('.navbar img');
+ScrollTrigger.create({
+    trigger: ".div1", 
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => {
+        logo.setAttribute('src', './images/logo.jpg'); 
+    },
+    onLeaveBack: () => {
+        logo.setAttribute('src', './images/newlogo.png'); 
+    }
+});
+
+ScrollTrigger.create({
+    trigger: "#diver2", 
+    start: "top center",
+    end: "bottom center",
+    onEnter: () => {
+        logo.setAttribute('src', './images/newLogo.png'); // Change to another logo
+    },
+    onLeaveBack: () => {
+        logo.setAttribute('src', './images/logo.jpg'); // Revert to the original logo
+    }
+});

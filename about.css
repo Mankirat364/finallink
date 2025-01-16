@@ -1,23 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body,html{
+
+body,
+html {
     width: 100%;
     min-height: 100vh;
     font-family: "Montserrat", serif;
     overflow-x: hidden;
-    background-color: black;
+    background: linear-gradient(to right, #14152B, #0e0e1d); 
 }
 .wrapper{
    height: 100vh;
     width: 100%;
-    background-color: black;
+     background: linear-gradient(to right, #14152B, #0e0e1d); 
     transition: background-image 0.5s ease-in-out;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 }
 .carbonContentDiv{
@@ -34,50 +38,55 @@ body,html{
     z-index: 10000000;
     top: 0;
 }
-.aboutNavbar img{
+
+.aboutNavbar img {
     width: 13vw;
-    filter: grayscale(1) brightness(1000%);
 }
-.white{
+
+.white {
     color: white;
     text-transform: uppercase;
 }
-.navigationMenu{
+
+.navigationMenu {
     display: flex;
     flex-direction: column;
     gap: 4px;
     cursor: pointer;
 }
-.navigationMenu .line1{
+
+.navigationMenu .line1 {
     width: 3vw;
     height: 1px;
     background-color: white;
 }
-.videodiv{
+
+.videodiv {
     width: 33vw;
     height: 65vh;
     background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
 }
-.videodiv video{
+
+.videodiv img {
     width: 100%;
     height: 100%;
     filter: brightness(40%);
     object-fit: cover;
 }
 
-.videotext{
+.videotext {
     position: absolute;
     color: white;
     text-transform: uppercase;
     top: 50%;
     text-align: center;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 3vw;
     line-height: normal;
     width: 100vw;
@@ -133,7 +142,7 @@ body,html{
     border: none;
     min-width: fit-content;
     min-height: fit-content;
-    padding: 1vw 6vw 1vw 6vw; 
+    padding: 1vw 6vw 1vw 6vw;
     text-transform: uppercase;
     background: none;
     color: white;
@@ -142,12 +151,14 @@ body,html{
     cursor: pointer;
     position: relative;
 }
+
 .videotext button::before {
     content: "PLAY VIDEO";
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(0); /* Include scale(0) in the transform */
+    transform: translate(-50%, -50%) scale(0);
+    /* Include scale(0) in the transform */
     background-color: white;
     color: black;
     width: 100%;
@@ -155,38 +166,56 @@ body,html{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease; /* Add smooth transition for scaling */
+    transition: transform 0.3s ease;
+    /* Add smooth transition for scaling */
     z-index: 1;
 }
 
 .videotext button:hover::before {
-    transform: translate(-50%, -50%) scale(1); /* Scale to 1 on hover */
+    transform: translate(-50%, -50%) scale(1);
+    /* Scale to 1 on hover */
 }
-.detailSection{
+
+.detailSection {
     min-height: 100vh;
+     background: linear-gradient(to right, #14152B, #0e0e1d); 
 }
-.rightText{
+
+.rightText {
     display: flex;
     align-items: center;
     justify-content: right;
     padding-right: 8vw;
+
 }
-.headingDetails{
-    width:65%;
+
+.headingDetails {
+    width: 65%;
     display: flex;
     padding-top: 12vw;
     flex-direction: column;
     gap: 10px;
+    
+   
 }
 .headingDetails h1{
     color: white !important;
+
+}
+.headingDetails .heading{
+    font-size:2rem;
+    font-weight:bold;
+    color:#39C1D1;
 }
 .headingDetails p{
     text-transform: uppercase;
     font-size: 1vw;
+    font-weight: 300;
     color: white;
 }
-.description{
+
+
+.description {
     font-size: 1.4vw !important;
     font-weight: 500;
     color: white !important;
@@ -195,11 +224,12 @@ body,html{
     color: white !important;
     padding-top: 1vw;
 }
-.descirpitontext button{
+
+.descirpitontext button {
     border: none;
     min-width: fit-content;
     min-height: fit-content;
-    padding: 1vw 6vw 1vw 6vw; 
+    padding: 1vw 6vw 1vw 6vw;
     text-transform: uppercase;
     background: none;
     color: #fff;
@@ -208,6 +238,7 @@ body,html{
     cursor: pointer;
     position: relative;
 }
+
 .descirpitontext button::before {
     content: "VIEW TIMELINE";
     position: absolute;
@@ -221,75 +252,91 @@ body,html{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease; /* Add smooth transition for scaling */
+    transition: transform 0.3s ease;
+    /* Add smooth transition for scaling */
     z-index: 1;
 }
 
 .descirpitontext button:hover::before {
-    transform: translate(-50%, -50%) scale(1); /* Scale to 1 on hover */
+    transform: translate(-50%, -50%) scale(1);
+    /* Scale to 1 on hover */
 }
-.animatedImageSection{
+
+.animatedImageSection {
     height: 100vh;
     position: relative;
 }
-.animatedImageSection2{
+
+.animatedImageSection2 {
     width: 70vw;
     height: 60vh;
     position: absolute;
     left: 50%;
-    transform: translate(-50%,0%);
-   
+    transform: translate(-50%, 0%);
+
 }
-.animatedImageSection2 img{
+
+.animatedImageSection2 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.abouttheimagecontainer{
+
+.abouttheimagecontainer {
     height: 100vh;
 }
-.outerwrapper{
+
+.outerwrapper {
     min-height: 100vh;
 }
-.aboutimageDetail{
+
+.aboutimageDetail {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 6vw 9vw;
 }
-.contentContainer{
+
+.contentContainer {
     width: 65%;
 }
-.contentContainer h1{
+
+.contentContainer h1 {
     font-weight: 400;
     text-transform: uppercase;
     font-size: 4vw !important;
-    color: white;
+    color: #39C1d1;
     
 }
-.contentContainer p{
+
+.contentContainer p {
     font-size: 1.5vw;
     color: white;
 }
-.mt-5{
+
+.mt-5 {
     margin-top: 3vw;
 }
-.imageContainer{
+
+.imageContainer {
     width: 77vw;
     height: 52vh;
     background-color: black;
     position: absolute;
     right: 0;
 }
-.imageContainer img{
+
+.imageContainer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.passionateDiv{
+
+.passionateDiv {
     min-height: 100vh;
 }
-.passionCenter{
+
+.passionCenter {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -307,60 +354,71 @@ body,html{
     font-size: 1.2vw;
     padding-top: .5vw;
 }
-.passionateCenterImage{
+
+.passionateCenterImage {
     width: 80vw;
     margin-top: 5vw;
     height: 70vh;
     background-color: black;
 }
-.passionateCenterImage img{
+
+.passionateCenterImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.ourVision{
+
+.ourVision {
     height: 100vh;
 }
-.centerVision{
+
+.centerVision {
     display: flex;
     justify-content: center;
     text-align: left;
     padding-left: 6vw;
     padding-top: 4vw;
 }
-.contentingdiv{
+
+.contentingdiv {
     width: 70%;
     padding-left: 2.5vw;
 }
-.contentingdiv h1{
+
+.contentingdiv h1 {
     font-weight: 500;
     font-size: 2vw;
-    color: white !important;
+    color: #39c1d1 !important;
     text-transform: uppercase;
 }
-.contentingdiv p{
+
+.contentingdiv p {
     padding-top: 1vw;
     color: white !important;
 }
-.carAnimation{
+
+.carAnimation {
     min-height: 100vh;
     position: relative;
 }
-.carImage{
+
+.carImage {
     width: 50vw;
     height: 50vh;
-    
+
     position: absolute;
     left: 50%;
     top: 30%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.carImage img{
+
+.carImage img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.carbonContentDiv{
+
+.carbonContentDiv {
     position: absolute;
     right: -100%;
     color: white !important;
@@ -368,22 +426,29 @@ body,html{
 .carbonContentDiv p{
 
 }
-.wholeTeam{
+
+.carbonContentDiv p {}
+
+.wholeTeam {
     min-height: 100vh;
 }
-.wholeTeamCenter{
+
+.wholeTeamCenter {
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
+
 }
-.wholeTeamCenter p{
+
+.wholeTeamCenter p {
     font-weight: 500;
     text-transform: uppercase;
     font-size: 2.5vw;
     color: white !important;
 }
-.wholeTeamCenterDiv{
+
+.wholeTeamCenterDiv {
     width: 80vw;
     height: 70vh;
     background-color: black;
@@ -391,83 +456,102 @@ body,html{
     right: 1%;
     margin-top: 1vw;
 }
-.wholeTeamCenterDiv img{
+
+.wholeTeamCenterDiv img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.aboutCompanyCenter{
+
+.aboutCompanyCenter {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.companudiv{
+
+.companudiv {
     width: 60%;
     padding-left: 5vw;
 }
-.companudiv p{
+
+.companudiv p {
     font-size: 1.5vw;
     color: white !important;
     font-weight: 600;
     text-transform: uppercase;
+    color: white;
 }
-.companyPhoto{
+
+.companyPhoto {
     height: 100vh;
     margin-top: 4vw;
     position: relative;
 }
-.companyPhoto img{
+
+.companyPhoto img {
     width: 100%;
     height: 100%;
     filter: brightness(50%);
     object-fit: cover;
 }
-.comapanyContent{
+
+.comapanyContent {
     position: absolute;
     top: 50%;
     left: 50%;
     text-align: center;
     color: white;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.comapanyContent h1{
+
+.comapanyContent h1 {
     text-transform: uppercase;
     font-size: 5vw !important;
     color: white !important;
     line-height: 1 !important;
 }
-.comapanyContent p{
+
+.comapanyContent p {
     padding-top: 1vw;
     color: white !important;
     color: rgb(196, 196, 196);
 }
-.ourCapabilities{
+
+.ourCapabilities {
     min-height: 100vh;
     margin-top: 23vw;
 }
-.ourCapabilitiesCente{
+
+.ourCapabilitiesCente {
     display: flex;
     flex-direction: column;
     align-items: center;
-}.ourCapabilitiesCente .title{
+}
+
+.ourCapabilitiesCente .title {
     width: 60%;
 }
-.ourCapabilitiesCente .title h1{
+
+.ourCapabilitiesCente .title h1 {
     text-transform: uppercase;
     font-weight: 500;
-    color: white !important;
+    color: #39C1D1 !important;
     font-size: 4vw;
+    color: white;
 
 }
-.ourCapabilitiesCente .title p{
+
+.ourCapabilitiesCente .title p {
     padding-top: 1.5vw;
     color: white !important;
 }
-.lastdivOFwebsite{
-   height: 100vh;
+
+.lastdivOFwebsite {
+    height: 100vh;
 
 }
-.lastdivOFwebsite img{
+
+.lastdivOFwebsite img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -476,6 +560,11 @@ body,html{
     html{
         overflow-x: hidden;
     }
+    .aboutNavbar img {
+        width: 8vw;
+        filter: grayscale(1) brightness(1000%);
+    }
+    
     .aboutNavbar img{
         width: 32vw !important;
     }
@@ -485,7 +574,7 @@ body,html{
         background-color: black;
     }
     .white {
-        color: black;
+        color: white;
         text-transform: uppercase;
         padding-right: 10vw !important;
     }
@@ -500,7 +589,7 @@ body,html{
     }
     .videodiv{
         height: 47.0348vh;
-    width: 67.9997vw;
+        width: 67.9997vw;
     }
     .rightText {
         justify-content: center !important;
